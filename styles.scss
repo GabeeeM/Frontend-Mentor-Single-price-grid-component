@@ -1,0 +1,107 @@
+$cyan: hsl(179, 62%, 43%);
+$brightYellow: hsl(71, 73%, 54%);
+$lightGray: hsl(204, 43%, 93%);
+$grayishBlue: hsl(218, 22%, 67%);
+
+body {
+    background-color: $lightGray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+    margin: 0px;
+
+    .Card {
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+        max-width: 90%;
+
+        .Top {
+            background-color: white;
+            padding: 1.5625rem;
+            border-top-left-radius: .3125rem;
+            border-top-right-radius: .3125rem;
+
+            h2 {
+                color: $cyan;
+            }
+
+            .green {
+                color: $brightYellow;
+            }
+
+            p {
+                color: $grayishBlue;
+            }
+        }
+
+        .Bottom {
+            display: flex;
+            flex-direction: row;
+
+            .BottomLeft {
+                background-color: $cyan;
+                flex-basis: 50%;
+                padding: 2rem;
+                border-bottom-left-radius: .3125rem;
+                color: white;
+
+                span {
+                    font-size: 2rem;
+                    margin-right: .3125rem;
+                    color: white;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .Button {
+                    background-color: $brightYellow;
+                    border-radius: .3125rem;
+                    text-align: center;
+                    margin-top: 2.1875rem;
+                    padding-top: .1875rem;
+                    padding-bottom: .1875rem;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+
+                    p {
+                        color: white;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .BottomRight {
+                background-color: #4abebd;
+                flex-basis: 50%;
+                padding: 2rem;
+                border-bottom-right-radius: .3125rem;
+                color: white;
+                
+                ul {
+                    list-style: none;
+                    padding-left: 0px;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+
+            .Bottom {
+              flex-direction: column;
+
+              .BottomLeft {
+                border-bottom-left-radius: 0px;
+              }
+
+              .BottomRight {
+                border-bottom-left-radius: .3125rem;
+              }
+            }
+        }
+    }
+}
